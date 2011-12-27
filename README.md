@@ -1,4 +1,4 @@
-# Stepper - Sprinkle packages configured for my purposes
+# London Stepper - bunch of Sprinkle packages configured for my purposes
 
 ### What to read:
 
