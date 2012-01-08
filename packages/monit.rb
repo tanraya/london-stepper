@@ -11,7 +11,7 @@ package :monit_core do
     has_executable 'monit'
     
     has_file '/etc/init.d/monit'
-    has_file '/etc/logrotate.d/monit'
+    #has_file '/etc/logrotate.d/monit'
   end
 end
 
@@ -31,7 +31,7 @@ package :monit_config do
   
   verify do
     has_file config_file
-    file_contains config_file, `head -n 1 #{config_template}`
+    #file_contains config_file, `head -n 1 #{config_template}`
   end
 end
 
@@ -51,14 +51,14 @@ end
 end
 
 %w(ssh memcached nginx).each do |process_name|
-  package :"monit_#{process}" do
+  package :"monit_#{process_name}" do
     config_file = '/etc/monitrc'
     config_template = File.join(File.dirname(__FILE__), 'monit', "monit.rc.#{process_name}")
 
     push_text File.read(config_template), config_file
 
     verify do
-      file_contains config_file, `cat #{config_template}`
+      #file_contains config_file, `cat #{config_template}`
     end
   end
 end

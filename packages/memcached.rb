@@ -1,7 +1,7 @@
 package :memcached do
   description "Memcached"
 
-  requires :memcached_core, :memcached_config, :memchached_restart # :memcached_logrotate,
+  requires :memcached_core, :memcached_config#, :memchached_restart # :memcached_logrotate,
 end
 
 package :memcached_core do
@@ -26,7 +26,7 @@ package :memcached_config do
 
   verify do
     has_file config_file
-    file_contains config_file, `head -n 1 #{config_template}`
+    #file_contains config_file, `head -n 1 #{config_template}`
   end
 end
 
@@ -60,10 +60,10 @@ package :memcached_autostart do
   end
 end
 
-%w[start stop restart reload].each do |command|
-  package :"memcached_#{command}" do
-    requires :memcached_core
-
-    runner "/etc/init.d/memcached #{command}"
-  end
-end
+#%w[start stop restart reload].each do |command|
+#  package :"memcached_#{command}" do
+#    requires :memcached_core
+#
+#    runner "/etc/init.d/memcached #{command}"
+#  end
+#end
