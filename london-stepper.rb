@@ -22,6 +22,8 @@ require File.dirname(__FILE__) + '/packages/ruby'
 require File.dirname(__FILE__) + '/packages/mysql'
 require File.dirname(__FILE__) + '/packages/sphinx'
 require File.dirname(__FILE__) + '/packages/nginx'
+require File.dirname(__FILE__) + '/packages/memcached'
+require File.dirname(__FILE__) + '/packages/monit'
 
 policy :stack, :roles => :app do
   requires :build_essential
@@ -34,6 +36,8 @@ policy :stack, :roles => :app do
   requires :mysql
   requires :sphinx
   requires :nginx
+  requires :memcached
+  requires :monit
 end
 
 deployment do
