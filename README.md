@@ -18,6 +18,7 @@ London Stepper - a bunch of Sprinkle packages that configured for my purposes. I
 
 ### Info
  
+ * https://github.com/blahutka/sprinkle-stack/
  * http://engineering.gomiso.com/2011/08/26/forget-chef-or-puppet-automate-with-sprinkle/
  * http://www.agileweboperations.com/sprinkle-automated-infrastructure-for-the-rest-of-us
  * https://github.com/grimen/sprinkle-stack
