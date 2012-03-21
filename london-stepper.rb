@@ -20,7 +20,7 @@ require File.dirname(__FILE__) + '/packages/rsync'
 require File.dirname(__FILE__) + '/packages/imagemagick'
 require File.dirname(__FILE__) + '/packages/ruby'
 require File.dirname(__FILE__) + '/packages/mysql'
-require File.dirname(__FILE__) + '/packages/sphinx'
+#require File.dirname(__FILE__) + '/packages/sphinx'
 require File.dirname(__FILE__) + '/packages/nginx'
 require File.dirname(__FILE__) + '/packages/memcached'
 require File.dirname(__FILE__) + '/packages/monit'
@@ -34,7 +34,7 @@ policy :stack, :roles => :app do
   requires :imagemagick  
   requires :ruby
   requires :mysql
-  requires :sphinx
+  #requires :sphinx SPHINX PACKAGE IS NOT TESTED YET!
   requires :nginx
   requires :memcached
   requires :monit
