@@ -1,7 +1,7 @@
 package :ruby do
-  description 'Ruby Virtual Machine'
-  version '1.9.2'
-  source "http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.tar.gz"
+  description 'Ruby Language'
+  version '1.9.3'
+  source "http://ftp.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p125.tar.gz"
   requires :ruby_dependencies
   
   verify do

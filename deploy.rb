@@ -9,5 +9,5 @@ set :sudo_prompt, ""
 set :runner, nil
 set :run_method, :run
 
-role :app, '127.0.0.1', :primary => true
+role :app, '46.21.100.241', :primary => true
 
